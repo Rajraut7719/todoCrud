@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <h4>Update Todo</h4>
+    <div class="row">
+        <div class="col-sm-12">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit"class="btn btn-success"value="Update">
+                <a href="{% url 'addandshow' %}"class="btn btn-info">Back to Home</a>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}
+
